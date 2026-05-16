@@ -1,0 +1,27 @@
+
+### FILE: k8s/overlays/sandbox/configs/simple-publisher-config.yaml
+```yaml
+# Simple publisher configuration for sandbox
+port: 3000
+timeout: 30000
+
+webhookValidationEnabled: true
+
+retryEnabled: true
+maxAttempts: 3
+backoffSeconds: 5
+
+connectSeconds: 10
+responseSeconds: 30
+
+batchSize: 10
+maxConcurrent: 5
+
+logLevel: "info"
+logFormat: "json"
+
+metricsEnabled: true
+metricsPort: 9090
+
+tracingEnabled: false
+serviceName: "simple-publisher"

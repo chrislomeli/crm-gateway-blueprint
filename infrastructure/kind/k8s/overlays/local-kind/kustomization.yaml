@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# Use the sandbox base configuration
+resources:
+- ../../eks/k8s/overlays/sandbox
+
+# Patch services to use NodePort for local Kind development
+patchesStrategicMerge:
+- service-nodeport-patches.yaml
+
+namePrefix: ""

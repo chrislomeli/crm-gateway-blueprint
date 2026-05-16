@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: simple-publisher-config
+  labels:
+    app: simple-publisher
+    component: publisher
+    tier: application
+data:
+  # Application-specific configuration
+  simple-publisher.yaml: |
+    server:
+      port: 3000
+      timeout: 30000
+      
+    publisher:
+      # Queue names are now read directly from shared config
+      # using keys: sqs.hubspot.webhookImportQueueName, etc.
+        
+    logging:
+      level: "info"
+      format: "json"
+      
+    metrics:
+      enabled: true
+      port: 9090
+      
+    tracing:
+      enabled: true
+      serviceName: "simple-publisher"

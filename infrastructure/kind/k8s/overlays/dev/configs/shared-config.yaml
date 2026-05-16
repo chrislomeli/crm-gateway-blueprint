@@ -1,0 +1,27 @@
+# Shared business configuration for local environment
+
+sqs:
+  hubspot:
+    webhookSingleQueueName: aio-webhook-single
+    webhookImportQueueName: aio-webhook-import
+    intentQueueName: aio-intent-queue
+
+s3-buckets:
+  acme-crm: acme-crm-local
+  exports-prefix: exports/
+
+datasets:
+  contacts:
+    elasticsearch-index: contacts
+    crm-table: crm.contacts
+    batch-files-table: crm.batch_files_contacts
+
+  tenants:
+    elasticsearch-index: tenants
+    crm-table: crm.tenants
+    batch-files-table: crm.batch_files_tenants
+
+  campaigns:
+    elasticsearch-index: campaigns
+    crm-table: crm.campaigns
+    batch-files-table: crm.batch_files_campaigns

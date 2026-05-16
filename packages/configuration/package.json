@@ -1,0 +1,41 @@
+{
+  "name": "@platform/configuration",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf dist node_modules",
+    "test": "vitest",
+    "test:integration": "vitest run src/test/integration.test.ts",
+    "test:watch": "vitest watch",
+    "bootstrap:localstack": "../../scripts/setup-localstack-secrets.sh",
+    "bootstrap:localstack-logs": "kubectl logs job/localstack-secrets-bootstrap -n data-pipeline",
+    "dump:secrets": "tsx scripts/dump-localstack-secrets.ts",
+    "health-check": "tsx scripts/health-check.ts"
+  },
+  "dependencies": {
+    "@platform/core": "workspace:*",
+    "@platform/services": "workspace:*",
+    "glob": "^11.0.3",
+    "js-yaml": "^4.1.0",
+    "zod": "^4.1.3"
+  },
+  "devDependencies": {
+    "@types/glob": "^9.0.0",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.0.0",
+    "@types/pg": "^8.15.5",
+    "tsup": "^8.5.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.6.1"
+  }
+}

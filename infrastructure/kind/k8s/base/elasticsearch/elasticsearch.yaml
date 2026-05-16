@@ -1,0 +1,119 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: elasticsearch
+  labels:
+    app.kubernetes.io/name: elasticsearch
+    app.kubernetes.io/component: search-engine
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: elasticsearch
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: elasticsearch
+        app.kubernetes.io/component: search-engine
+    spec:
+      containers:
+        - name: elasticsearch
+          image: opensearchproject/opensearch:2.11.0
+          ports:
+            - containerPort: 9200
+              name: http
+            - containerPort: 9300
+              name: transport
+          env:
+            # Single node cluster for development
+            - name: discovery.type
+              value: "single-node"
+            # Disable security for local development
+            - name: DISABLE_SECURITY_PLUGIN
+              value: "true"
+            - name: DISABLE_INSTALL_DEMO_CONFIG
+              value: "true"
+            # Memory settings for Kind (much lower)
+            - name: OPENSEARCH_JAVA_OPTS
+              value: "-Xms256m -Xmx256m"
+            # Cluster settings
+            - name: cluster.name
+              value: "acme-local"
+            - name: node.name
+              value: "opensearch-node-1"
+            # Disable disk watermarks for local development
+            - name: cluster.routing.allocation.disk.threshold_enabled
+              value: "false"
+            - name: cluster.routing.allocation.disk.watermark.low
+              value: "99%"
+            - name: cluster.routing.allocation.disk.watermark.high
+              value: "99%"
+            - name: cluster.routing.allocation.disk.watermark.flood_stage
+              value: "99%"
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "250m"
+            limits:
+              memory: "1Gi"
+              cpu: "500m"
+          volumeMounts:
+            - name: elasticsearch-data
+              mountPath: /usr/share/opensearch/data
+          readinessProbe:
+            httpGet:
+              path: /_cluster/health?wait_for_status=yellow&timeout=5s
+              port: 9200
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /_cluster/health
+              port: 9200
+            initialDelaySeconds: 60
+            periodSeconds: 30
+            timeoutSeconds: 10
+      volumes:
+        - name: elasticsearch-data
+          emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: elasticsearch
+  labels:
+    app.kubernetes.io/name: elasticsearch
+    app.kubernetes.io/component: search-engine
+spec:
+  type: ClusterIP
+  ports:
+    - port: 9200
+      targetPort: 9200
+      protocol: TCP
+      name: http
+    - port: 9300
+      targetPort: 9300
+      protocol: TCP
+      name: transport
+  selector:
+    app.kubernetes.io/name: elasticsearch
+---
+# NodePort service for external access during development
+apiVersion: v1
+kind: Service
+metadata:
+  name: elasticsearch-nodeport
+  labels:
+    app.kubernetes.io/name: elasticsearch
+    app.kubernetes.io/component: search-engine
+spec:
+  type: NodePort
+  ports:
+    - port: 9200
+      targetPort: 9200
+      nodePort: 30920
+      protocol: TCP
+      name: http
+  selector:
+    app.kubernetes.io/name: elasticsearch

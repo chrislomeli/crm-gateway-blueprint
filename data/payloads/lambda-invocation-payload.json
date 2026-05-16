@@ -1,0 +1,20 @@
+{
+  "Records": [
+    {
+      "messageId": "test-message-1",
+      "receiptHandle": "test-receipt-handle",
+      "body": "{\"eventId\":\"ac6f77b3-d3bc-424a-b84e-12526cfceebe\",\"subscriptionType\":\"contact.propertyChange\",\"portalId\":7497446,\"objectId\":9276201,\"propertyName\":\"hubspot_owner_id\",\"propertyValue\":\"12345\",\"occurredAt\":1754615138972}",
+      "attributes": {
+        "ApproximateReceiveCount": "1",
+        "SentTimestamp": "1754615138972",
+        "SenderId": "AIDAIENQZJOLO23YVJ4VO",
+        "ApproximateFirstReceiveTimestamp": "1754615138972"
+      },
+      "messageAttributes": {},
+      "md5OfBody": "test-md5-hash",
+      "eventSource": "aws:sqs",
+      "eventSourceARN": "arn:aws:sqs:us-west-2:123456789012:hubspotSingleContactQueue-cdk.fifo",
+      "awsRegion": "us-west-2"
+    }
+  ]
+}

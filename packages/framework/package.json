@@ -1,0 +1,42 @@
+{
+  "name": "@platform/framework",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf dist node_modules",
+    "test": "vitest",
+    "test:integration": "vitest run --config vitest.config.ts src/test/integration.test.ts",
+    "test:watch": "vitest watch",
+    "bootstrap:localstack": "../../scripts/setup-localstack-secrets.sh",
+    "bootstrap:localstack-logs": "kubectl logs job/localstack-secrets-bootstrap -n data-pipeline",
+    "dump:secrets": "tsx scripts/dump-localstack-secrets.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/pg": "^8.15.5",
+    "tsup": "^8.5.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.6.1"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.864.0",
+    "@platform/configuration": "workspace:*",
+    "@platform/core": "workspace:*",
+    "@platform/connectors": "workspace:*",
+    "@platform/services": "workspace:*",
+    "csv-parse": "^6.1.0",
+    "csv-stringify": "^6.6.0",
+    "ulid": "^3.0.1",
+    "uuid": "^11.1.0"
+  }
+}

@@ -1,0 +1,123 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: intent-subscriber
+  labels:
+    app.kubernetes.io/name: intent-subscriber
+    app.kubernetes.io/component: intent-processor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: intent-subscriber
+      app.kubernetes.io/component: intent-processor
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: intent-subscriber
+        app.kubernetes.io/component: intent-processor
+        # Let DD_VERSION read from a pod label if you want
+        app.kubernetes.io/version: "dev"
+    spec:
+      containers:
+        - name: intent-subscriber
+          image: intent-subscriber:latest
+          imagePullPolicy: Never
+          ports:
+            - name: http
+              containerPort: 3000  # matches Service targetPort: 3000
+          livenessProbe:
+            httpGet:
+              path: /health/live
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 30
+            timeoutSeconds: 5
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /health/ready
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
+          startupProbe:
+            httpGet:
+              path: /health/startup
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 5
+            timeoutSeconds: 5
+            failureThreshold: 12
+          # Environment variables for local development
+          env:
+            - name: NODE_ENV
+              value: "local"
+            - name: CDK_DEPLOY_ENV
+              value: "dev"
+            - name: CDK_DEPLOY_COLOR
+              value: "blue"
+            - name: CDK_DEPLOY_ACCOUNT
+              value: "282418939575"
+            - name: CDK_DEPLOY_REGION
+              value: "us-west-2"
+            - name: AWS_REGION
+              value: "us-west-2"
+            - name: CDK_GIT_BRANCH
+              value: "local"
+            # AWS LocalStack credentials for local development
+            - name: AWS_ACCESS_KEY_ID
+              value: "test"
+            - name: AWS_SECRET_ACCESS_KEY
+              value: "test"
+            - name: AWS_DEFAULT_REGION
+              value: "us-west-2"
+            # LocalStack endpoint configuration
+            - name: AWS_ENDPOINT_URL
+              value: "http://localstack:4566"
+            - name: LOCALSTACK_HOSTNAME
+              value: "localstack"
+            # API endpoint for decision service (hardcoded for local)
+            - name: API_ENDPOINT
+              value: "https://api.acmeqa.com"
+          # Volume mounts for configuration and secrets
+          volumeMounts:
+            - name: shared-config
+              mountPath: /config/shared
+              readOnly: true
+            - name: app-config
+              mountPath: /config/app
+              readOnly: true
+            - name: secrets
+              mountPath: /config/secrets
+              readOnly: true
+          # Datadog integration disabled for local development
+          # env:
+          #   - name: DD_SERVICE
+          #     value: "intent-subscriber"
+          #   - name: DD_ENV
+          #     value: "dev"
+          #   - name: DD_VERSION
+          #     valueFrom:
+          #       fieldRef:
+          #         fieldPath: metadata.labels['app.kubernetes.io/version']
+          #   # Traces (APM)
+          #   - name: DD_TRACE_AGENT_URL
+          #     value: "http://datadog-agent.default.svc.cluster.local:8126"
+          #   # Metrics (DogStatsD)
+          #   - name: DD_AGENT_HOST
+          #     value: "datadog-agent.default.svc.cluster.local"
+          #   - name: DD_DOGSTATSD_PORT
+          #     value: "8125"
+      # Volumes for ConfigMaps
+      volumes:
+        - name: shared-config
+          configMap:
+            name: shared-config
+        - name: app-config
+          configMap:
+            name: intent-subscriber-config
+        - name: secrets
+          secret:
+            secretName: secrets

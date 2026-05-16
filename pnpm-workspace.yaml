@@ -1,0 +1,9 @@
+packages:
+  - 'packages/*'
+  - 'services/*'
+  - 'services/*/*'
+  - 'integrations/*'
+  - 'tools'
+  - '!services/file-generator-api'
+  - '!services/file-generator-worker'
+  - '!services/batch-loader'

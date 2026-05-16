@@ -1,0 +1,58 @@
+{
+  "index_patterns": ["*-*"],
+  "template": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 1,
+      "refresh_interval": "5s",
+      "max_result_window": 10000,
+      "analysis": {
+        "analyzer": {
+          "default_analyzer": {
+            "type": "standard",
+            "filter": ["lowercase", "asciifolding"]
+          }
+        }
+      }
+    },
+    "mappings": {
+      "dynamic": true,
+      "properties": {
+        "id": {
+          "type": "keyword"
+        },
+        "external_id": {
+          "type": "keyword"
+        },
+        "business_id": {
+          "type": "keyword"
+        },
+        "crm_type": {
+          "type": "keyword"
+        },
+        "import_batch_id": {
+          "type": "keyword"
+        },
+        "import_timestamp": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "created_at": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "updated_at": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        }
+      }
+    }
+  },
+  "version": 1,
+  "priority": 50,
+  "_meta": {
+    "description": "Default template for tenant-specific indices",
+    "created_by": "TenantIndexManager",
+    "version": "1.0.0"
+  }
+}

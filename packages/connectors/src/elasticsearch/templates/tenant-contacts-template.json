@@ -1,0 +1,212 @@
+{
+  "index_patterns": ["contacts-*"],
+  "template": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 1,
+      "refresh_interval": "5s",
+      "max_result_window": 50000,
+      "analysis": {
+        "analyzer": {
+          "name_analyzer": {
+            "type": "custom",
+            "tokenizer": "standard",
+            "filter": ["lowercase", "asciifolding"]
+          },
+          "email_analyzer": {
+            "type": "custom",
+            "tokenizer": "keyword",
+            "filter": ["lowercase"]
+          },
+          "phone_analyzer": {
+            "type": "custom",
+            "tokenizer": "keyword",
+            "filter": ["lowercase"]
+          }
+        }
+      }
+    },
+    "mappings": {
+      "properties": {
+        "id": {
+          "type": "keyword"
+        },
+        "external_id": {
+          "type": "keyword"
+        },
+        "first_name": {
+          "type": "text",
+          "analyzer": "name_analyzer",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "last_name": {
+          "type": "text",
+          "analyzer": "name_analyzer",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "full_name": {
+          "type": "text",
+          "analyzer": "name_analyzer",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 512
+            }
+          }
+        },
+        "email": {
+          "type": "text",
+          "analyzer": "email_analyzer",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "phone": {
+          "type": "text",
+          "analyzer": "phone_analyzer",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 50
+            }
+          }
+        },
+        "mobile_phone": {
+          "type": "text",
+          "analyzer": "phone_analyzer",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 50
+            }
+          }
+        },
+        "company": {
+          "type": "text",
+          "analyzer": "name_analyzer",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "company_id": {
+          "type": "keyword"
+        },
+        "title": {
+          "type": "text",
+          "analyzer": "standard",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "department": {
+          "type": "keyword"
+        },
+        "lead_source": {
+          "type": "keyword"
+        },
+        "lead_status": {
+          "type": "keyword"
+        },
+        "lifecycle_stage": {
+          "type": "keyword"
+        },
+        "owner_id": {
+          "type": "keyword"
+        },
+        "owner_name": {
+          "type": "keyword"
+        },
+        "tags": {
+          "type": "keyword"
+        },
+        "address": {
+          "properties": {
+            "street": {
+              "type": "text"
+            },
+            "city": {
+              "type": "keyword"
+            },
+            "state": {
+              "type": "keyword"
+            },
+            "postal_code": {
+              "type": "keyword"
+            },
+            "country": {
+              "type": "keyword"
+            }
+          }
+        },
+        "social_profiles": {
+          "properties": {
+            "linkedin": {
+              "type": "keyword"
+            },
+            "twitter": {
+              "type": "keyword"
+            },
+            "facebook": {
+              "type": "keyword"
+            }
+          }
+        },
+        "custom_fields": {
+          "type": "object",
+          "dynamic": true
+        },
+        "created_at": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "updated_at": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "last_activity_date": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "business_id": {
+          "type": "keyword"
+        },
+        "crm_type": {
+          "type": "keyword"
+        },
+        "import_batch_id": {
+          "type": "keyword"
+        },
+        "import_timestamp": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        }
+      }
+    }
+  },
+  "version": 1,
+  "priority": 100,
+  "_meta": {
+    "description": "Template for tenant-specific contact indices",
+    "created_by": "TenantIndexManager",
+    "version": "1.0.0"
+  }
+}

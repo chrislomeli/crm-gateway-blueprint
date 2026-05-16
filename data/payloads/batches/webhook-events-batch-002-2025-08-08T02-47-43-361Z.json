@@ -1,0 +1,1002 @@
+[
+  {
+    "eventId": "2132bce7-379d-4367-a235-4ee6b2ad7836",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 908157,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":96,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754614498150
+  },
+  {
+    "eventId": "1ffeba0f-f4e2-48de-a1f6-4593381370fe",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 1136106,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":90,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754615327340
+  },
+  {
+    "eventId": "60d75ff6-4641-4b8a-a42b-59fdf6a1dccc",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 1453701,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":89,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754614100605
+  },
+  {
+    "eventId": "10852446-fb8c-478c-87d7-1911e4523a12",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 1487601,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":87,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":2}",
+    "occurredAt": 1754614007066
+  },
+  {
+    "eventId": "aa357a09-df23-4312-b56f-9a9bcdb57aad",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 215601,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":93,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754613092003
+  },
+  {
+    "eventId": "dd3b6265-4a14-43bc-b383-aa8bf7e24387",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 444414,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":88,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754616034124
+  },
+  {
+    "eventId": "34ba8a49-3b13-4eee-99d0-8285d0eabc86",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 444433,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":92,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754612754152
+  },
+  {
+    "eventId": "67f79516-2b61-4efd-9e2a-4c096dbae87d",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 444447,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":86,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754614452705
+  },
+  {
+    "eventId": "cc121991-96e5-4447-aba3-b09234b79272",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 444462,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":93,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754612661202
+  },
+  {
+    "eventId": "ba1ecdc1-2ec1-4ca7-8d43-71916b57d11a",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 444031,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":91,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754616037795
+  },
+  {
+    "eventId": "0d50cbb7-59ce-4d79-9666-1e0f83cea606",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 1134317,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":99,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754614928935
+  },
+  {
+    "eventId": "7d2d3cef-37a4-4ec9-a6c9-d3f614a2ac12",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 1299051,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":98,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754613858788
+  },
+  {
+    "eventId": "04fdf0fa-58dc-437e-b0cd-45a37ec488bc",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 1719351,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":91,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754612838702
+  },
+  {
+    "eventId": "69d3b5b7-33d2-4644-9c42-4498f407b293",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 1726151,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":99,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754613863378
+  },
+  {
+    "eventId": "8f030d8a-3bce-4ec4-bf40-de5afdaa03d0",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 1688801,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":94,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754614468166
+  },
+  {
+    "eventId": "ec4f1aa5-e665-4403-a0d5-8a6b2fa04f18",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 1706151,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":98,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754613645798
+  },
+  {
+    "eventId": "ee78a89b-e9fb-4d33-9c9b-3dcace0775a6",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 19752,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":88,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754612782850
+  },
+  {
+    "eventId": "69916052-dea7-4c33-8f88-01337a7e8b83",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 308251,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":95,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754616105627
+  },
+  {
+    "eventId": "17ee2d37-d269-4a87-b8dd-df3de6fab856",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 311051,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":90,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754613835618
+  },
+  {
+    "eventId": "cd20911a-49f1-40be-b2a6-741bd7c64e68",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 443753,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":93,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754613236351
+  },
+  {
+    "eventId": "9aca1a50-f736-4ade-bd7b-7aa18b65a737",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 443770,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":93,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754612911326
+  },
+  {
+    "eventId": "98cbb46d-9c20-4c83-9ee5-80300e0b187f",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 443782,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":97,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754614098741
+  },
+  {
+    "eventId": "1823a043-47a7-465d-9880-b6b7bab68b49",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 443816,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":91,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754612572157
+  },
+  {
+    "eventId": "8ec7e51b-82b0-4419-8c66-bea2990434f5",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 443667,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":94,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754615780204
+  },
+  {
+    "eventId": "9decb679-bbee-4d0c-85e6-b23cebccea9f",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 443710,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":92,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754615736647
+  },
+  {
+    "eventId": "9faecf24-e73e-4e0b-8ad9-09d8c75b8eaa",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 9235851,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":90,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754613716336
+  },
+  {
+    "eventId": "a345c422-f53b-49dc-935f-b6fe0b51f991",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 5877251,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":93,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754615362145
+  },
+  {
+    "eventId": "7c80743c-b3ac-4ffb-8237-20e8a095131b",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 8898201,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":96,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754614435661
+  },
+  {
+    "eventId": "68fc2073-65e0-4277-bc53-50f2a3b879bf",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 9151151,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":94,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754613753441
+  },
+  {
+    "eventId": "4cadb5c5-e01c-4c57-9c21-992a853ab7f2",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 9159151,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":91,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754616149984
+  },
+  {
+    "eventId": "7e954453-b62f-4b0e-a3f3-a88fa9b51b8b",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 9175751,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":86,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754614924570
+  },
+  {
+    "eventId": "74702c79-28ba-4f07-a244-3543e6d16e97",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 9128151,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":92,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754615078535
+  },
+  {
+    "eventId": "ec385770-fcc4-4bc2-983c-afd65bf3b342",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 1929051,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":93,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754613147701
+  },
+  {
+    "eventId": "d2c87099-9fd4-4029-96d8-583fab42a0c9",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 1930551,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":91,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754613804905
+  },
+  {
+    "eventId": "9f328bbe-0c37-48c0-aae9-e466e00ac60a",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 1939451,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":98,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":2}",
+    "occurredAt": 1754612922751
+  },
+  {
+    "eventId": "5faa296b-0e99-4b43-b21d-cf9c61ff75c4",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 1941001,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":85,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754614986671
+  },
+  {
+    "eventId": "c0b1faac-9296-40c8-b483-ac9799cd7936",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 1981601,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":91,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":2}",
+    "occurredAt": 1754613615722
+  },
+  {
+    "eventId": "b17e344c-1c13-4277-9075-c89fb79cbb31",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 2301202,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":95,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754613841110
+  },
+  {
+    "eventId": "3fcef738-eaa2-4d13-affd-87781e5e6f2a",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 2302051,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":86,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754612692250
+  },
+  {
+    "eventId": "d3f7c8e7-bde9-4dd9-81e4-e772e9a9e579",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 2328251,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":89,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754615115040
+  },
+  {
+    "eventId": "653c1de3-ca5e-4b6b-afd0-70ae3737d06f",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 2335401,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":89,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754615612833
+  },
+  {
+    "eventId": "8d575ae5-1905-4b87-b287-1232f6d5549d",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 2560351,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":96,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754612747615
+  },
+  {
+    "eventId": "f33127a8-e595-426f-b9bb-7a681c8ebcda",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 2616351,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":91,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754616003051
+  },
+  {
+    "eventId": "4099fb25-71ca-42ff-b2cc-5b0422ab37af",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 2570151,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":85,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754612827948
+  },
+  {
+    "eventId": "133ffa60-b61e-4554-bdf7-7ac1464360d0",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 2584801,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":96,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754613625600
+  },
+  {
+    "eventId": "16bf26d9-f580-433f-afe7-3b3a508bb8cf",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 2588101,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":98,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754615927828
+  },
+  {
+    "eventId": "925df9e0-7fe9-46a6-a76e-bf6e62e0d436",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 2997101,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":87,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754613249475
+  },
+  {
+    "eventId": "d0d1f309-8ad7-4648-9c94-fa43f5c46d7f",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 3002851,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":96,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754614873478
+  },
+  {
+    "eventId": "f27c1957-0142-4335-82ae-058ea7953a04",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 3004101,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":97,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754613313263
+  },
+  {
+    "eventId": "9f2250f6-2c77-402a-b691-07ae54964027",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 2979001,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":91,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754614959615
+  },
+  {
+    "eventId": "e6645a2f-7f96-41a3-b268-3b19e85b2fe6",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 3291201,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":87,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754613729888
+  },
+  {
+    "eventId": "b41b7eab-b7f4-42b5-a6ef-08068a8ba457",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 3302251,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":88,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754612889922
+  },
+  {
+    "eventId": "c6886cf6-36fb-460a-8538-a524a0b3dfe4",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 3312301,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":92,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754614744680
+  },
+  {
+    "eventId": "5f434904-2230-4844-8b1c-e70929743b79",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 4248330,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":90,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754615929265
+  },
+  {
+    "eventId": "c21e5131-2d4e-4244-846d-03b46a48265a",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 4249678,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":98,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754614063346
+  },
+  {
+    "eventId": "cae929fe-76a8-463a-9f5e-6e0ebef8ee55",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 4252416,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":85,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754613758866
+  },
+  {
+    "eventId": "159e8859-f536-49a2-b3db-e834760c8055",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 9186551,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":91,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754615670037
+  },
+  {
+    "eventId": "db038ad5-ea73-40d9-a7b4-cf9aee8cf080",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 9193551,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":95,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754615319026
+  },
+  {
+    "eventId": "6bdf221b-1aa8-4148-b4e2-8013f5f07c4e",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 9234751,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":91,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754614627450
+  },
+  {
+    "eventId": "a432d7a0-df42-4ab8-a892-01741b0184b5",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 9422301,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":85,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754612906529
+  },
+  {
+    "eventId": "14925ebd-2baa-4421-a625-d561e2318d57",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 9439301,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":89,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754614382332
+  },
+  {
+    "eventId": "0ef008bd-66f5-405b-8d12-b18825998384",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 9440301,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":91,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754615878375
+  },
+  {
+    "eventId": "4580778d-2887-48a1-8a85-bd2cc1b5944d",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 9389001,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":92,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754615139883
+  },
+  {
+    "eventId": "c3e7ffc0-e17a-40e5-8767-bd55e3b2b353",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 9401551,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":97,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754612871093
+  },
+  {
+    "eventId": "ed996e87-de00-4a5e-881c-e020aefae906",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 2018651,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":86,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754613693819
+  },
+  {
+    "eventId": "8aa026f7-2251-4d93-b70a-e978713e6cb7",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 2024901,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":93,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754612699920
+  },
+  {
+    "eventId": "3d42f810-fd4d-464d-9bce-150d138928ab",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 2265451,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":93,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754615423196
+  },
+  {
+    "eventId": "ea6718c1-661c-4d7f-872a-5edc96fec983",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 2274301,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":93,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754613576071
+  },
+  {
+    "eventId": "4fd460b1-94b5-4b90-94b2-c51eeb39c663",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 2278051,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":97,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754614117369
+  },
+  {
+    "eventId": "500630b0-b051-4c41-bd1a-43aee44c0cd8",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 2288701,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":91,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754615342242
+  },
+  {
+    "eventId": "0d47a2e5-0cd6-4fe1-9f97-43818981aa4f",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 2300151,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":90,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754615145051
+  },
+  {
+    "eventId": "76eef949-97e2-4015-abf6-cf97b6724cd2",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 2300952,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":92,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754613272533
+  },
+  {
+    "eventId": "b104d324-9a6d-4f27-905b-bbdd47bcce60",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 2658301,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":87,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754612970179
+  },
+  {
+    "eventId": "bdf9000e-83b2-440c-b263-7bcd3b1cbd34",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 3206601,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":86,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754613193746
+  },
+  {
+    "eventId": "52592132-251b-4d69-a964-d4ff6e8378a9",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 3481051,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":92,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754614764949
+  },
+  {
+    "eventId": "2afc20aa-43f9-47a2-ae29-3cdd62773580",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 3490901,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":86,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754615104761
+  },
+  {
+    "eventId": "c63bd04e-c9bd-48fa-ac6e-4efb252d0497",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 3494601,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":89,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754612667284
+  },
+  {
+    "eventId": "fd922060-012f-4892-919c-0d599de9d0d6",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 4249502,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":95,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754615163610
+  },
+  {
+    "eventId": "d86cb7a6-1030-4b95-8bf4-cde0626d38a5",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 4249555,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":94,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754612896039
+  },
+  {
+    "eventId": "6a9ee3f8-d963-4fce-b4f5-2c2a3edbbf6e",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 4252786,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":97,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754615114426
+  },
+  {
+    "eventId": "187a9261-8058-4854-8179-d4efc366a04c",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 4254374,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":94,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754614404364
+  },
+  {
+    "eventId": "f9ade419-516d-4c6a-9fc3-69c35a0adedd",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 4431301,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":88,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754612980707
+  },
+  {
+    "eventId": "57c3c159-b86b-4fc5-bffb-94dbeb89c996",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 4441001,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":95,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754614014465
+  },
+  {
+    "eventId": "fff8e12f-b832-4ac3-98cd-a975e611e81e",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 4451501,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":86,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754612888642
+  },
+  {
+    "eventId": "6cfb0277-02f0-44ac-86b6-c025b926a5d3",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 4452151,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":94,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754614462867
+  },
+  {
+    "eventId": "f86014c7-b967-43f9-859f-9ec29e6e1d90",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 4397751,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":87,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754615844972
+  },
+  {
+    "eventId": "4e9d2a04-ad77-4988-bf9b-3b0e0260bc13",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 4408651,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":93,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754613773835
+  },
+  {
+    "eventId": "2c405ac1-d970-497b-90ee-3779735aa82e",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 4419851,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":94,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754615205644
+  },
+  {
+    "eventId": "b3a2057f-d313-49f8-8905-4ca947cb80ac",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 4420001,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":89,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754615172270
+  },
+  {
+    "eventId": "771bfc3c-c59f-4e51-b538-6635939b67ff",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 4425251,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":91,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754613348202
+  },
+  {
+    "eventId": "b52caaec-962f-4034-834b-f01fd82da77f",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 5031251,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":91,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754613291672
+  },
+  {
+    "eventId": "23a12596-9bad-48a1-9a41-b6731b4b26da",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 5031301,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":89,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754613655734
+  },
+  {
+    "eventId": "7c247bbf-94d5-4898-9e56-8e1ce0dea21d",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 5332951,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":86,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754612958060
+  },
+  {
+    "eventId": "8205155b-6f59-4a02-b699-adfe23e7146c",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 8936351,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":94,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754615994049
+  },
+  {
+    "eventId": "a8d4cbb3-d7a3-44f4-866d-b563053e783e",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 9028651,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":87,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754615362182
+  },
+  {
+    "eventId": "c3cc2127-d04f-4c81-ab59-3ab05efe93f2",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 9057151,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":95,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":1}",
+    "occurredAt": 1754613801196
+  },
+  {
+    "eventId": "332298f3-5226-4202-bda1-0ac3cc004825",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 9063202,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":89,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":2}",
+    "occurredAt": 1754612691269
+  },
+  {
+    "eventId": "20bce625-9bb3-43d9-812b-25e94533353b",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 9063251,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":92,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":2}",
+    "occurredAt": 1754614874826
+  },
+  {
+    "eventId": "36fba12a-ea9e-470f-8d9d-7d1b425e4e8d",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 9063801,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":91,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":2}",
+    "occurredAt": 1754613331540
+  },
+  {
+    "eventId": "ed18ab77-6a83-4664-9d50-913035d4d517",
+    "subscriptionType": "contact.propertyChange",
+    "portalId": 6496795,
+    "objectId": 9064051,
+    "propertyName": "intent-name-16223",
+    "propertyValue": "{\"intent_score\":96,\"intent_trigger\":true,\"context_summary\":\"High engagement detected\",\"context_description\":\"Contact has shown significant interest in product demos\",\"timestamp\":\"2025-08-08T01:22:32.196Z\",\"source\":\"ai_model_v2\",\"version\":\"1.0\"}",
+    "changeSource": "{\"businessid\":16223,\"acmeowner\":118178,\"phones\":2}",
+    "occurredAt": 1754616150440
+  }
+]

@@ -1,0 +1,85 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: datadog-agent
+  labels:
+    app.kubernetes.io/name: datadog-agent
+    app.kubernetes.io/component: observability
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: datadog-agent-sink
+  labels:
+    app.kubernetes.io/name: datadog-agent
+    app.kubernetes.io/component: observability
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: datadog-agent
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: datadog-agent
+        app.kubernetes.io/component: observability
+    spec:
+      serviceAccountName: datadog-agent
+      tolerations:
+        - key: "node-role.kubernetes.io/control-plane"
+          operator: "Exists"
+          effect: "NoSchedule"
+        - key: "node-role.kubernetes.io/master"
+          operator: "Exists"
+          effect: "NoSchedule"
+      nodeSelector:
+        kubernetes.io/os: linux
+      containers:
+        - name: agent
+          image: datadog/agent:7
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: DD_API_KEY
+              value: "dev-dummy-key"
+            - name: DD_APM_ENABLED
+              value: "true"
+            - name: DD_DOGSTATSD_NON_LOCAL_TRAFFIC
+              value: "true"
+            - name: DD_LOG_LEVEL
+              value: "DEBUG"
+          ports:
+            - name: traces
+              containerPort: 8126
+              hostPort: 8126      # ← bind to node, matches your kind extraPortMappings
+              protocol: TCP
+            - name: dogstatsd
+              containerPort: 8125
+              hostPort: 8125      # ← bind to node, matches your kind extraPortMappings
+              protocol: UDP
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "128Mi"
+            limits:
+              cpu: "200m"
+              memory: "256Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: datadog-agent
+  labels:
+    app.kubernetes.io/name: datadog-agent
+    app.kubernetes.io/component: observability
+spec:
+  selector:
+    app.kubernetes.io/name: datadog-agent
+  ports:
+    - name: traces
+      port: 8126
+      targetPort: 8126
+      protocol: TCP
+    - name: dogstatsd
+      port: 8125
+      targetPort: 8125
+      protocol: UDP
+  type: ClusterIP

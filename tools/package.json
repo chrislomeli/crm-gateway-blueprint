@@ -1,0 +1,31 @@
+{
+  "name": "@platform/tools",
+  "version": "1.0.0",
+  "description": "Infrastructure and development tools for the Blueprint platform",
+  "type": "module",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist",
+    "setup-infrastructure": "tsx infrastructure/InfrastructureManager.ts setup",
+    "health-check": "tsx infrastructure/InfrastructureManager.ts health",
+    "setup-database": "tsx scripts/setup.database.ts",
+    "setup-localstack": "tsx infrastructure/LocalStackManager.ts"
+  },
+  "dependencies": {
+    "@platform/core": "workspace:*",
+    "@platform/services": "workspace:*",
+    "@platform/configuration": "workspace:*",
+    "@platform/connectors": "workspace:*",
+    "mysql2": "^3.6.0",
+    "tsx": "^4.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "tsup": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

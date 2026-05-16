@@ -1,0 +1,11 @@
+# Webhook-subscriber specific configuration for local
+decisionUrl: https://{{ env.API_ENDPOINT }}/aio/decision
+intentTTLDays: 2
+cacheType: 'in-memory'
+cacheTableName: 'calls.intents'
+cacheTtlSeconds: 3600
+cacheHealthMaxAgeMinutes: 60
+cacheInMemoryMaxSize: 1000
+cacheTtlMaxStaleSeconds: 86400
+cacheHealthCheckIntervalSeconds: 60
+

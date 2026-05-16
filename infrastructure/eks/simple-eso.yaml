@@ -1,0 +1,24 @@
+apiVersion: external-secrets.io/v1
+kind: ExternalSecret
+metadata:
+  name: shared-secrets
+  namespace: clomeli
+spec:
+  refreshInterval: 1h
+  secretStoreRef:
+    name: aws-secrets-manager
+    kind: SecretStore
+  target:
+    name: secrets
+    creationPolicy: Owner
+  data:
+    # Get entire JSON from each AWS secret and put in YAML files
+    - secretKey: calls-db.yaml
+      remoteRef:
+        key: dev-rds-default        # Your existing structured AWS secret
+    - secretKey: opensearch.yaml
+      remoteRef:
+        key: dev-aws-es             # Your existing structured AWS secret  
+    - secretKey: crm.yaml
+      remoteRef:
+        key: shared-crm             # Your existing structured AWS secret

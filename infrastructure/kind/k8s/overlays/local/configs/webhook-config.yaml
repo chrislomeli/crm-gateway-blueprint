@@ -1,0 +1,17 @@
+retry:
+  enabled: true
+  maxAttempts: 3
+  backoffSeconds: 5
+
+timeout:
+  connectSeconds: 10
+  responseSeconds: 30
+
+validation:
+  requireHttps: false
+  validateCertificates: false
+
+batchSize: 10
+maxConcurrent: 5
+flushIntervalSeconds: 60
+logLevel: "debug"

@@ -1,0 +1,49 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: clomeli
+
+resources:
+  - ../../base/shared-config
+  - ../../base/webhook-subscriber
+  - ../../base/intent-subscriber
+  - ../../base/simple-publisher
+  - secrets.yaml  # The actual secret manifest
+
+configMapGenerator:
+  - name: shared-config
+    behavior: replace
+    files:
+      - shared.yaml=configs/shared-config.yaml
+  
+  - name: crm-hubspot-webhook-processor-config
+    files:
+      - webhook-subscriber.yaml=configs/webhook-config.yaml
+  
+  - name: aio-hubspot-signal-service-config
+    files:
+      - intent-subscriber.yaml=configs/intent-config.yaml
+  
+  - name: crm-hubspot-webhook-ingress-config
+    files:
+      - simple-publisher.yaml=configs/simple-publisher-config.yaml
+  
+  - name: environment-config
+    literals:
+      - aws_account_id=282418939575
+      - aws_region=us-west-2
+      - app_iam_role_arn=arn:aws:iam::282418939575:role/dev-1-282418939575-kubernetes-worker-role
+
+# IRSA disabled - ServiceAccounts use EC2 instance profile instead
+# replacements:
+#   - source:
+#       kind: ConfigMap
+#       name: environment-config
+#       fieldPath: data.app_iam_role_arn
+#     targets:
+#       - select:
+#           kind: ServiceAccount
+#         fieldPaths:
+#           - metadata.annotations.[eks.amazonaws.com/role-arn]
+
+# Environment-specific configuration moved to main configMapGenerator section above

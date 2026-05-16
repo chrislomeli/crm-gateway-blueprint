@@ -1,0 +1,28 @@
+{
+  "Records":[
+    {
+      "eventVersion":"2.1",
+      "eventSource":"aws:s3",
+      "awsRegion":"us-west-2",
+      "eventTime":"2020-07-21T18:09:23.554Z",
+      "eventName":"ObjectCreated:Put",
+      "s3":{
+        "s3SchemaVersion":"1.0",
+        "configurationId":"Parse and Collect data",
+        "bucket":{
+          "name":"hubspotwebhooks",
+          "ownerIdentity":{
+            "principalId":"A1TLQ7YSG2WAWO"
+          },
+          "arn":"arn:aws:s3:::hubspotwebhooks"
+        },
+        "object":{
+          "key":"3142647697-212177-3938013",
+          "size":2987,
+          "eTag":"d72bf2a88d2c12c01b07e63e7c7d0fee",
+          "sequencer":"005F172F920E3A2FFA"
+        }
+      }
+    }
+  ]
+}

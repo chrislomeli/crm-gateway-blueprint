@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: shared-config
+  labels:
+    app.kubernetes.io/name: shared-config
+    app.kubernetes.io/component: configuration
+data:
+  shared.yaml: |
+    # Placeholder - will be replaced by overlay
+    aws:
+      region: us-west-2

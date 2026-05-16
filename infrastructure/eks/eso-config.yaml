@@ -1,0 +1,92 @@
+---
+# SecretStore - tells ESO how to connect to AWS
+apiVersion: external-secrets.io/v1
+kind: SecretStore
+metadata:
+  name: aws-secrets-manager
+  namespace: clomeli
+spec:
+  provider:
+    aws:
+      service: SecretsManager
+      region: us-west-2
+      auth:
+        secretRef:
+          accessKeyIDSecretRef:
+            name: aws-credentials
+            key: access-key-id
+          secretAccessKeySecretRef:
+            name: aws-credentials
+            key: secret-access-key
+          sessionTokenSecretRef:
+            name: aws-credentials
+            key: session-token
+
+---
+# ExternalSecret - tells ESO what to fetch and how to format it
+apiVersion: external-secrets.io/v1
+kind: ExternalSecret
+metadata:
+  name: shared-secrets
+  namespace: clomeli
+spec:
+  refreshInterval: 5m  # Caches for 5 minutes
+  secretStoreRef:
+    name: aws-secrets-manager
+    kind: SecretStore
+  target:
+    name: secrets  # Creates K8s secret named "secrets"
+    creationPolicy: Owner
+    template:
+      type: Opaque
+      data:
+        # Your exact format with resolved values
+        "calls-db.yaml": |
+          host: {{ .rds.host }}
+          port: {{ .rds.port }}
+          user: {{ .rds.username }}
+          password: {{ .rds.password }}
+          database: calls
+        
+        "crm-db.yaml": |
+          host: postgres
+          port: 5432
+          database: pipeline
+          user: postgres
+          password: postgres_password
+        
+        "opensearch.yaml": |
+          accessKeyId: {{ .es.access_id }}
+          accessKeySecret: {{ .es.access_secret }}
+          esHost: https://es.acmeqa.com
+          esRegion: us-west-1
+          tenantIsolationLevel: tenant
+        
+        "hubspot.yaml": |
+          hubspotClientId: {{ .hubspot.hubspot_client_id }}
+          hubspotClientSecret: {{ .hubspot.hubspot_client_secret }}
+          hubspotLoginUri: https://app.hubspot.com/oauth/authorize
+          hubspotRedirectUri: https://app.acme.com/oauth/hubspot-signup.php
+  
+  # Fetch from your existing AWS secrets
+  dataFrom:
+    - extract:
+        key: dev-rds-default  # Your existing secret
+      rewrite:
+        - regexp:
+            source: "(.*)"
+            target: "rds.$1"
+    
+    - extract:
+        key: dev-aws-es  # Your existing secret
+      rewrite:
+        - regexp:
+            source: "(.*)"
+            target: "es.$1"
+    
+    - extract:
+        key: shared-crm  # Your existing secret
+      rewrite:
+        - regexp:
+            source: "(.*)"
+            target: "hubspot.$1"

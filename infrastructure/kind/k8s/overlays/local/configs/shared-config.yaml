@@ -1,0 +1,54 @@
+# Shared business configuration for local environment
+
+sqs:
+  hubspot:
+    singleQueueName: hubspot-webhook-single-queue
+    importQueueName: hubspot-webhook-import-queue
+    intentQueueName: hubspot-intent-queue
+
+# S3 buckets (using LocalStack)
+s3-buckets:
+  acme-crm: acme-crm-local
+  exports-prefix: exports/
+
+datasets:
+  contacts:
+    elasticsearch-index: contacts
+    crm-table: crm.contacts
+    batch-files-table: crm.batch_files_contacts
+
+  tenants:
+    tenants-table: calls.tenants
+    files-table: calls.tenants
+    batch-files-table: crm.batch_files_tenants
+
+  campaigns:
+    elasticsearch-index: campaigns
+    crm-table: crm.campaigns
+    batch-files-table: crm.batch_files_campaigns
+
+
+# LocalStack endpoint for SQS and S3
+localstack:
+  endpoint: http://localstack:4566
+  region: us-west-2
+
+# Elasticsearch configuration for local K8s cluster
+elasticsearch:
+  endpoint: http://elasticsearch:9200
+  region: us-west-2
+  tenantIsolationLevel: tenant
+
+# OpenSearch configuration (alias for Elasticsearch)
+opensearch:
+  endpoint: http://elasticsearch:9200
+  region: us-west-2
+  tenantIsolationLevel: tenant
+
+# HubSpot API configuration
+hubspot:
+  # For local development - using direct values instead of secrets manager
+  # In production, these should be stored in AWS Secrets Manager and referenced with !ssm<key>[field]
+  baseUrl: https://api.hubapi.com
+  timeout: 30000
+  retryAttempts: 3

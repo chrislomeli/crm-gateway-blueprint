@@ -1,0 +1,117 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-publisher
+  labels:
+    app: simple-publisher
+    component: publisher
+    tier: application
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simple-publisher
+  template:
+    metadata:
+      labels:
+        app: simple-publisher
+        component: publisher
+        tier: application
+    spec:
+      containers:
+      - name: simple-publisher
+        image: simple-publisher:latest
+        imagePullPolicy: Never  # For local Kind development
+        ports:
+        - containerPort: 3000
+          name: http
+        - containerPort: 3001
+          name: health
+        env:
+        - name: NODE_ENV
+          value: "local"
+        - name: PORT
+          value: "3000"
+        - name: LOG_LEVEL
+          value: "info"
+        # AWS LocalStack credentials for local development
+        - name: AWS_ACCESS_KEY_ID
+          value: "test"
+        - name: AWS_SECRET_ACCESS_KEY
+          value: "test"
+        - name: AWS_DEFAULT_REGION
+          value: "us-west-2"
+        - name: AWS_REGION
+          value: "us-west-2"
+        # LocalStack endpoint configuration
+        - name: AWS_ENDPOINT_URL
+          value: "http://localstack:4566"
+        - name: LOCALSTACK_HOSTNAME
+          value: "localstack"
+        # LocalStack setup feature flag
+        - name: LOCALSTACK_SETUP_ENABLED
+          value: "false"
+        # CDK deployment environment variables
+        - name: CDK_DEPLOY_ENV
+          value: "local"
+        - name: CDK_DEPLOY_COLOR
+          value: "blue"
+        - name: CDK_GIT_BRANCH
+          value: "main"
+        - name: CDK_DEPLOY_ACCOUNT
+          value: "000000000000"
+        - name: CDK_DEPLOY_REGION
+          value: "us-west-2"
+        volumeMounts:
+        - name: shared-config
+          mountPath: /config/shared
+          readOnly: true
+        - name: app-config
+          mountPath: /config/app
+          readOnly: true
+        - name: secrets
+          mountPath: /config/secrets
+          readOnly: true
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        livenessProbe:
+          httpGet:
+            path: /health/live
+            port: 3001
+          initialDelaySeconds: 60
+          periodSeconds: 30
+          timeoutSeconds: 10
+          failureThreshold: 6    # 6 × 30s = 3 minutes before restart
+        readinessProbe:
+          httpGet:
+            path: /health/ready
+            port: 3001
+          initialDelaySeconds: 10
+          periodSeconds: 5
+          timeoutSeconds: 5
+          failureThreshold: 12   # 12 × 5s = 1 minute before removing from service
+        startupProbe:
+          httpGet:
+            path: /health/startup
+            port: 3001
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 10
+          failureThreshold: 30   # 30 × 10s = 5 minutes to start up
+      volumes:
+      - name: shared-config
+        configMap:
+          name: shared-config
+      - name: app-config
+        configMap:
+          name: simple-publisher-config
+      - name: secrets
+        secret:
+          secretName: secrets
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30

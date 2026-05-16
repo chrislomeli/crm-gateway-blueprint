@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: opensearch-config
+  labels:
+    app.kubernetes.io/name: opensearch-config
+    app.kubernetes.io/component: config
+data:
+  # OpenSearch configuration (non-sensitive data) - will be merged with secrets
+  opensearch.yaml: |
+    esHost: https://es.acmeqa.com
+    esRegion: us-west-1
+    tenantIsolationLevel: tenant  # tenant, crm, or none

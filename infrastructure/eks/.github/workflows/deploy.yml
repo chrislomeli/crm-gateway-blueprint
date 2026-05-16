@@ -1,0 +1,101 @@
+name: Deploy to EKS
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'sandbox'
+        type: choice
+        options:
+          - sandbox
+          - dev
+          - staging
+          - prod
+
+env:
+  AWS_REGION: us-west-2
+  ENVIRONMENT: ${{ github.event.inputs.environment || 'sandbox' }}
+
+jobs:
+  terraform:
+    name: Deploy Infrastructure
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ env.AWS_REGION }}
+    
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v2
+      with:
+        terraform_version: 1.6.0
+    
+    - name: Terraform Init
+      working-directory: ./terraform
+      run: terraform init
+    
+    - name: Terraform Plan
+      working-directory: ./terraform
+      run: |
+        terraform plan \
+          -var="environment=${{ env.ENVIRONMENT }}" \
+          -var="cluster_name=${{ secrets.EKS_CLUSTER_NAME }}" \
+          -out=tfplan
+    
+    - name: Terraform Apply
+      if: github.ref == 'refs/heads/main'
+      working-directory: ./terraform
+      run: terraform apply -auto-approve tfplan
+    
+    outputs:
+      namespace: ${{ steps.terraform.outputs.namespace }}
+
+  deploy-k8s:
+    name: Deploy Applications
+    needs: terraform
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ env.AWS_REGION }}
+    
+    - name: Update kubeconfig
+      run: |
+        aws eks update-kubeconfig \
+          --name ${{ secrets.EKS_CLUSTER_NAME }} \
+          --region ${{ env.AWS_REGION }}
+    
+    - name: Deploy with Kustomize
+      run: |
+        kubectl apply -k k8s/overlays/${{ env.ENVIRONMENT }}/
+    
+    - name: Wait for deployments
+      run: |
+        kubectl -n ${{ env.ENVIRONMENT }} rollout status deployment/webhook-subscriber --timeout=5m
+        kubectl -n ${{ env.ENVIRONMENT }} rollout status deployment/intent-subscriber --timeout=5m
+        kubectl -n ${{ env.ENVIRONMENT }} rollout status deployment/simple-publisher --timeout=5m
+    
+    - name: Verify External Secret
+      run: |
+        kubectl -n ${{ env.ENVIRONMENT }} get externalsecret calls-db-credentials
+        kubectl -n ${{ env.ENVIRONMENT }} get secret calls-db-secret

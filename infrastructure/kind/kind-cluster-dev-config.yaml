@@ -1,0 +1,24 @@
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+name: acme-dev
+nodes:
+- role: control-plane
+  extraPortMappings:
+  # Database NodePort mappings (different ports from acme-local)
+  - containerPort: 30306
+    hostPort: 31306
+    protocol: TCP
+  - containerPort: 30432
+    hostPort: 31432
+    protocol: TCP
+  # LocalStack NodePort mapping
+  - containerPort: 30566
+    hostPort: 31566
+    protocol: TCP
+  # Reserve additional ports for future services
+  - containerPort: 30567
+    hostPort: 31567
+    protocol: TCP
+  - containerPort: 30568
+    hostPort: 31568
+    protocol: TCP

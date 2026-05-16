@@ -1,0 +1,6 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources: []
+  # Datadog agent disabled for local development
+#  - datadog-agent.yaml
+#  - datadog-agent-nodeport.yaml

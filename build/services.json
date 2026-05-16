@@ -1,0 +1,19 @@
+{
+  "services": [
+    {
+      "packageName": "@service/intent-subscriber",
+      "imageName": "aio-hubspot-signal-service",
+      "entryPoint": "dist/intent-handler.js"
+    },
+    {
+      "packageName": "@service/simple-publisher",
+      "imageName": "crm-hubspot-webhook-ingress",
+      "entryPoint": "dist/simple-publisher.js"
+    },
+    {
+      "packageName": "@service/webhook-subscriber",
+      "imageName": "crm-hubspot-webhook-processor",
+      "entryPoint": "dist/webhook-handler.js"
+    }
+  ]
+}

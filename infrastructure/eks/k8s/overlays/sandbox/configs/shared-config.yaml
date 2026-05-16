@@ -1,0 +1,53 @@
+# Shared configuration for sandbox environment
+environment: sandbox
+
+# LocalStack configuration for local development
+localstack:
+  endpoint: http://localhost:4566
+  region: us-west-2
+
+sqs:
+  hubspot:
+    webhookSingleQueueName: aio-webhook-single
+    webhookImportQueueName: aio-webhook-import
+    intentQueueName: aio-intent-queue
+  gracefulShutdownMs: 30000  # 30 seconds for graceful shutdown (was hardcoded to 5 seconds)
+
+aws:
+  region: us-west-2
+
+datasets:
+  contacts:
+    elasticsearch-index: contacts2
+    crm-table: crm.contacts
+    batch-files-table: crm.batch_files_contacts
+
+  tenants:
+    elasticsearch-index: sandbox-tenants
+    crm-table: crm.tenants
+    batch-files-table: crm.batch_files_tenants
+
+  campaigns:
+    elasticsearch-index: sandbox-campaigns
+    crm-table: crm.campaigns
+    batch-files-table: crm.batch_files_campaigns
+
+hubspot:
+  baseUrl: https://api.hubapi.com
+  timeout: 30000
+  retryAttempts: 3
+
+opensearch:
+  esHost: https://es.acmeqa.com
+  esRegion: us-west-1
+  tenantIsolationLevel: tenant  # tenant, crm, or none
+
+env:
+  observability:
+    provider: console
+    tracingEnabled: true
+    metricsEnabled: true
+  health:
+    maxRetries: 3
+    retryIntervalSeconds: 30
+    forceShutdownEnabled: false

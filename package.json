@@ -1,0 +1,40 @@
+{
+  "name": "k8s-hello-world",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@8.15.0",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "clean": "turbo run clean && rm -rf node_modules && find . -name 'tsconfig.tsbuildinfo' -delete",
+    "setup:infrastructure": "./.windsurf/workflows/setup-infrastructure.md",
+    "setup:database": "tsx scripts/setup.database.ts",
+    "setup:localstack": "./tools/scripts/setup.localstack.sh",
+    "setup:configs": "./tools/scripts/setup.configs.sh",
+    "db:init": "tsx scripts/setup.database.ts",
+    "docker:build": "tsx build/build-services.ts",
+    "docker:build:all": "tsx build/build-services.ts",
+    "docker:build:intent": "tsx build/build-services.ts aio-hubspot-signal-service",
+    "docker:build:webhook": "tsx build/build-services.ts crm-hubspot-webhook-processor",
+    "docker:build:publisher": "tsx build/build-services.ts crm-hubspot-webhook-ingress",
+    "kind:build": "KIND_LOAD=true tsx scripts/build-services.ts",
+    "kind:build:intent": "KIND_LOAD=true tsx scripts/build-services.ts aio-hubspot-signal-service"
+  },
+  "dependencies": {
+    "@crm/hubspot": "workspace:*",
+    "@platform/core": "workspace:*",
+    "@platform/services": "workspace:*",
+    "mysql2": "^3.6.0",
+    "source-map-support": "^0.5.21"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "esbuild": "^0.20.0",
+    "tsup": "^8.5.0",
+    "tsx": "^4.7.0",
+    "turbo": "^2.3.0",
+    "typescript": "^5.3.3",
+    "vitest": "^3.2.4"
+  }
+}

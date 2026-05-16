@@ -1,0 +1,295 @@
+openapi: 3.0.3
+info:
+  title: AIO Decision API
+  description: API for processing HubSpot intent decisions and scoring
+  version: 1.0.0
+  contact:
+    name: acme Development Team
+    email: dev@acme.com
+
+servers:
+  - url: https://httpbin.org
+    description: Test server for API validation
+
+paths:
+  /post:
+    post:
+      summary: Process AIO Decision Request
+      description: Processes intent scoring and decision making for HubSpot contacts
+      operationId: processAIODecision
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AIODecisionRequest'
+            example:
+              globalTraceId: "01K1EC4ZFNPTXNN2VVFYQJY8V6"
+              esContactData:
+                id: "a15e1b678167564e2995524990783a47345a9c138245f92eaa8b4da77dd67828"
+                acmecrmid: "16"
+                crmname: "hubspot"
+                businessid: "6164"
+                externalid: 35266442
+                ownerid: "12345"
+                acmeownerid: "104886"
+                phone164:
+                  - regionCode: "US"
+                    phone: "+15551234567"
+                    countryCode: 1
+                    type: "mobile"
+              dbData:
+                intentId: 134
+                intentDate: "2025-07-30T19:15:07.000Z"
+                fromState: "WAIT"
+                userResolution: "user found"
+                intentScoreThreshold: 85
+                intentFieldName: "intent-name-6164"
+              webhookParameterValue:
+                intent_score: 90
+                intent_trigger: true
+                context_summary: "High engagement detected"
+                context_description: "Contact has shown significant interest in product demos"
+                timestamp: "2025-08-06T14:19:47.713Z"
+                source: "ai_model_v2"
+                version: "1.0"
+      responses:
+        '200':
+          description: Successful processing
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuccessResponse'
+        '400':
+          description: Bad request - invalid input data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '422':
+          description: Unprocessable entity - validation failed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+components:
+  schemas:
+    AIODecisionRequest:
+      description: AIO decision POST request
+      type: object
+      required:
+        - globalTraceId
+        - esContactData
+        - dbData
+        - webhookParameterValue
+      properties:
+        globalTraceId:
+          type: string
+          description: Unique trace identifier for request tracking
+          example: "01K1EC4ZFNPTXNN2VVFYQJY8V6"
+        esContactData:
+          $ref: '#/components/schemas/AIOContactInfo'
+        dbData:
+          $ref: '#/components/schemas/DbData'
+        webhookParameterValue:
+          $ref: '#/components/schemas/IntentPropertyValueSchema'
+
+    AIOContactInfo:
+      description: Partial Contact data from Elasticsearch
+      type: object
+      required:
+        - id
+        - acmecrmid
+        - crmname
+        - businessid
+        - externalid
+        - ownerid
+        - acmeownerid
+      properties:
+        id:
+          type: string
+          description: Unique contact identifier
+          example: "a15e1b678167564e2995524990783a47345a9c138245f92eaa8b4da77dd67828"
+        acmecrmid:
+          type: string
+          description: acme CRM identifier
+          example: "16"
+        crmname:
+          type: string
+          description: Name of the CRM system
+          example: "hubspot"
+        businessid:
+          type: string
+          description: Business identifier
+          example: "6164"
+        externalid:
+          type: number
+          description: External contact identifier
+          example: 35266442
+        ownerid:
+          type: string
+          description: Contact owner identifier
+          example: "12345"
+        acmeownerid:
+          type: string
+          description: acme owner identifier
+          example: "104886"
+        phone164:
+          type: array
+          description: Array of phone numbers in E.164 format
+          items:
+            $ref: '#/components/schemas/PhoneRecord'
+      additionalProperties: true
+
+    PhoneRecord:
+      type: object
+      required:
+        - regionCode
+        - phone
+        - countryCode
+        - type
+      properties:
+        regionCode:
+          type: string
+          description: ISO country code
+          example: "US"
+        phone:
+          type: string
+          description: Phone number in E.164 format
+          example: "+15551234567"
+        countryCode:
+          type: number
+          description: Numeric country code
+          example: 1
+        type:
+          type: string
+          description: Phone number type
+          enum: [mobile, home, work, other]
+          example: "mobile"
+
+    DbData:
+      description: Intent and BusinessDetails information combining database state and configuration
+      type: object
+      required:
+        - intentId
+        - intentDate
+        - fromState
+        - userResolution
+        - intentScoreThreshold
+        - intentFieldName
+      properties:
+        intentId:
+          type: number
+          description: Intent table row identifier
+          example: 134
+        intentDate:
+          type: string
+          format: date-time
+          description: Original date of this intent - could be older if we were waiting for a userid
+          example: "2025-07-30T19:15:07.000Z"
+        fromState:
+          type: string
+          description: |
+            Previous state in the intent processing workflow
+            - FORWARD: Normal intent processing
+            - WAIT: Was picked up later when a acmeownerid was assigned for the contact
+          enum: [ WAIT, FORWARD ]
+          example: "WAIT"
+        userResolution:
+          type: string
+          description: Could we resolve the owner to a userid
+          enum: [ "user found", "unresolved - last chance to send" ]
+          example: "user found"
+        intentScoreThreshold:
+          type: number
+          description: BusinessDetails minimum score threshold set by the business
+          minimum: 0
+          maximum: 100
+          example: 85
+        intentFieldName:
+          type: string
+          description: BusinessDetails intentFieldName set by the business
+          example: "intent-name-6164"
+
+    IntentPropertyValueSchema:
+      description: Intent information for a contact From the HubSpot Webhook
+      type: object
+      required:
+        - intent_score
+        - intent_trigger
+        - context_summary
+        - context_description
+        - timestamp
+        - source
+        - version
+      properties:
+        intent_score:
+          type: number
+          description: Calculated intent score
+          minimum: 0
+          maximum: 100
+          example: 90
+        intent_trigger:
+          type: boolean
+          description: Whether the intent should trigger an action
+          example: true
+        context_summary:
+          type: string
+          description: Brief summary of the intent context
+          example: "High engagement detected"
+        context_description:
+          type: string
+          description: Detailed description of the intent context
+          example: "Contact has shown significant interest in product demos"
+        timestamp:
+          type: string
+          format: date-time
+          description: ISO 8601 timestamp of when the intent was detected
+          example: "2025-08-06T14:19:47.713Z"
+        source:
+          type: string
+          description: Source system that generated the intent
+          example: "ai_model_v2"
+        version:
+          type: string
+          description: Version of the intent detection model
+          example: "1.0"
+
+    SuccessResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: "success"
+        message:
+          type: string
+          example: "AIO decision processed successfully"
+        data:
+          type: object
+          description: Response data (structure depends on implementation)
+
+    ErrorResponse:
+      type: object
+      required:
+        - status
+        - message
+      properties:
+        status:
+          type: string
+          example: "error"
+        message:
+          type: string
+          example: "Invalid request data"
+        code:
+          type: string
+          example: "VALIDATION_ERROR"
+        details:
+          type: object
+          description: Additional error details

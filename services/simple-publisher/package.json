@@ -1,0 +1,46 @@
+{
+  "name": "@service/simple-publisher",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Simple ESM-compliant REST interface for processing HubSpot webhook events",
+  "main": "dist/simple-publisher.js",
+  "scripts": {
+    "build": "node_modules/.bin/tsup",
+    "dev": "node_modules/.bin/tsup --watch --onSuccess 'node dist/simple-publisher.js'",
+    "start": "node dist/simple-publisher.js",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "clean": "rm -rf dist node_modules"
+  },
+  "dependencies": {
+    "@aws-sdk/client-sqs": "^3.0.0",
+    "@crm/hubspot": "workspace:*",
+    "@hubspot/api-client": "^13.1.0",
+    "@platform/configuration": "workspace:*",
+    "@platform/connectors": "workspace:*",
+    "@platform/core": "workspace:*",
+    "@platform/framework": "workspace:*",
+    "@platform/infrastructure": "workspace:*",
+    "@platform/services": "workspace:*",
+    "axios": "^1.6.0",
+    "dd-trace": "^5.0.0",
+    "dotenv": "^17.2.1",
+    "hot-shots": "^11.2.0",
+    "p-limit": "^4.0.0",
+    "pkg-up": "^5.0.0",
+    "ts-toolbelt": "^9.6.0",
+    "ulid": "^3.0.1",
+    "uuid": "^9.0.0",
+    "uuid4": "^2.0.3",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "@types/uuid": "^9.0.0",
+    "@types/uuid4": "^2.0.3",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2",
+    "vitest": "^2.0.0"
+  }
+}

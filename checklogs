@@ -1,0 +1,1133 @@
+✅ Environment validation successful
+   Deploying to: local (blue)
+   Account: 000000000000
+   Region: us-west-2
+ConfigProvider initialized with config: {
+  success: true,
+  data: {
+    shared: {
+      sqs: [Object],
+      's3-buckets': [Object],
+      datasets: [Object],
+      localstack: [Object]
+    },
+    opensearch: {
+      accessKeyId: 'test',
+      accessKeySecret: 'test',
+      esHost: 'http://elasticsearch.default.svc.cluster.local:9200',
+      esRegion: 'us-west-2',
+      tenantIsolationLevel: 'tenant'
+    },
+    localstack: {
+      endpoint: 'http://localstack:4566',
+      region: 'us-west-2',
+      access_key: 'test',
+      secret_key: 'test'
+    },
+    hubspot: {
+      hubspotClientId: 'test-client-id',
+      hubspotClientSecret: 'test-client-secret',
+      hubspotLoginUri: 'https://app.hubspot.com/oauth/authorize',
+      hubspotRedirectUri: 'https://app.acme.com/oauth/hubspot-signup.php'
+    },
+    'crm-db': {
+      host: 'postgres',
+      port: 5432,
+      database: 'pipeline',
+      user: 'postgres',
+      password: 'postgres_password'
+    },
+    config: {
+      'calls-db': [Object],
+      'crm-db': [Object],
+      opensearch: [Object],
+      localstack: [Object],
+      hubspot: [Object]
+    },
+    'calls-db': {
+      host: 'mysql',
+      port: 3306,
+      user: 'acme_user',
+      password: 'acme_password',
+      database: 'calls'
+    },
+    'simple-publisher': {
+      port: 3000,
+      timeout: 30000,
+      webhookValidationEnabled: false,
+      retryEnabled: true,
+      maxAttempts: 3,
+      backoffSeconds: 5,
+      connectSeconds: 10,
+      responseSeconds: 30,
+      batchSize: 10,
+      maxConcurrent: 5,
+      logLevel: 'debug',
+      logFormat: 'json',
+      metricsEnabled: true,
+      metricsPort: 9090,
+      tracingEnabled: false,
+      serviceName: 'simple-publisher'
+    },
+    env: {
+      CDK_GIT_BRANCH: 'main',
+      NODE_ENV: 'local',
+      CDK_DEPLOY_ENV: 'local',
+      CDK_DEPLOY_COLOR: 'blue',
+      CDK_DEPLOY_ACCOUNT: '000000000000',
+      CDK_DEPLOY_REGION: 'us-west-2',
+      AWS_REGION: 'us-west-2',
+      APP_ENDPOINT: 'app-blue.acmedev.com',
+      API_ENDPOINT: 'api-blue.acmedev.com',
+      APIG_ENDPOINT: 'api2-blue.acmedev.com'
+    }
+  },
+  statusCode: 200
+}
+Available config keys: [ 'success', 'data', 'statusCode' ]
+Full config structure: {
+  "success": true,
+  "data": {
+    "shared": {
+      "sqs": {
+        "hubspot": {
+          "webhookSingleQueueName": "hubspot-webhook-single-queue",
+          "webhookImportQueueName": "hubspot-webhook-import-queue",
+          "intentQueueName": "hubspot-intent-queue"
+        }
+      },
+      "s3-buckets": {
+        "acme-crm": "acme-crm-local",
+        "exports-prefix": "exports/"
+      },
+      "datasets": {
+        "contacts": {
+          "elasticsearch-index": "contacts",
+          "crm-table": "crm.contacts",
+          "batch-files-table": "crm.batch_files_contacts"
+        },
+        "tenants": {
+          "elasticsearch-index": "tenants",
+          "crm-table": "crm.tenants",
+          "batch-files-table": "crm.batch_files_tenants"
+        },
+        "campaigns": {
+          "elasticsearch-index": "campaigns",
+          "crm-table": "crm.campaigns",
+          "batch-files-table": "crm.batch_files_campaigns"
+        }
+      },
+      "localstack": {
+        "endpoint": "http://localstack:4566",
+        "region": "us-west-2"
+      }
+    },
+    "opensearch": {
+      "accessKeyId": "test",
+      "accessKeySecret": "test",
+      "esHost": "http://elasticsearch.default.svc.cluster.local:9200",
+      "esRegion": "us-west-2",
+      "tenantIsolationLevel": "tenant"
+    },
+    "localstack": {
+      "endpoint": "http://localstack:4566",
+      "region": "us-west-2",
+      "access_key": "test",
+      "secret_key": "test"
+    },
+    "hubspot": {
+      "hubspotClientId": "test-client-id",
+      "hubspotClientSecret": "test-client-secret",
+      "hubspotLoginUri": "https://app.hubspot.com/oauth/authorize",
+      "hubspotRedirectUri": "https://app.acme.com/oauth/hubspot-signup.php"
+    },
+    "crm-db": {
+      "host": "postgres",
+      "port": 5432,
+      "database": "pipeline",
+      "user": "postgres",
+      "password": "postgres_password"
+    },
+    "config": {
+      "calls-db": {
+        "host": "mysql",
+        "port": 3306,
+        "user": "acme_user",
+        "password": "acme_password",
+        "database": "calls"
+      },
+      "crm-db": {
+        "host": "postgres",
+        "port": 5432,
+        "database": "pipeline",
+        "user": "postgres",
+        "password": "postgres_password"
+      },
+      "opensearch": {
+        "accessKeyId": "test",
+        "accessKeySecret": "test",
+        "esHost": "http://elasticsearch.default.svc.cluster.local:9200",
+        "esRegion": "us-west-2",
+        "tenantIsolationLevel": "tenant"
+      },
+      "localstack": {
+        "endpoint": "http://localstack:4566",
+        "region": "us-west-2",
+        "access_key": "test",
+        "secret_key": "test"
+      },
+      "hubspot": {
+        "hubspotClientId": "test-client-id",
+        "hubspotClientSecret": "test-client-secret",
+        "hubspotLoginUri": "https://app.hubspot.com/oauth/authorize",
+        "hubspotRedirectUri": "https://app.acme.com/oauth/hubspot-signup.php"
+      }
+    },
+    "calls-db": {
+      "host": "mysql",
+      "port": 3306,
+      "user": "acme_user",
+      "password": "acme_password",
+      "database": "calls"
+    },
+    "simple-publisher": {
+      "port": 3000,
+      "timeout": 30000,
+      "webhookValidationEnabled": false,
+      "retryEnabled": true,
+      "maxAttempts": 3,
+      "backoffSeconds": 5,
+      "connectSeconds": 10,
+      "responseSeconds": 30,
+      "batchSize": 10,
+      "maxConcurrent": 5,
+      "logLevel": "debug",
+      "logFormat": "json",
+      "metricsEnabled": true,
+      "metricsPort": 9090,
+      "tracingEnabled": false,
+      "serviceName": "simple-publisher"
+    },
+    "env": {
+      "CDK_GIT_BRANCH": "main",
+      "NODE_ENV": "local",
+      "CDK_DEPLOY_ENV": "local",
+      "CDK_DEPLOY_COLOR": "blue",
+      "CDK_DEPLOY_ACCOUNT": "000000000000",
+      "CDK_DEPLOY_REGION": "us-west-2",
+      "AWS_REGION": "us-west-2",
+      "APP_ENDPOINT": "app-blue.acmedev.com",
+      "API_ENDPOINT": "api-blue.acmedev.com",
+      "APIG_ENDPOINT": "api2-blue.acmedev.com"
+    }
+  },
+  "statusCode": 200
+}
+Checking localstack config paths:
+  localstack: {
+  endpoint: 'http://localstack:4566',
+  region: 'us-west-2',
+  access_key: 'test',
+  secret_key: 'test'
+}
+  shared.localstack: { endpoint: 'http://localstack:4566', region: 'us-west-2' }
+  aws.localstack: undefined
+  infrastructure.localstack: undefined
+[2025-09-07 20:11:03.753 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:54:14]>: [36mLog level changed from info to info[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mpreviousLevel[39m: "info"
+    [35mnewLevel[39m: "info"
+HealthChecker server listening on port 3001
+Health endpoints: /health/live, /health/ready, /health/startup, /health, /metrics
+[2025-09-07 20:11:03.757 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:65:12]>: [36mStarting Simple Publisher Service[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mport[39m: 3000
+    [35mlocalstackConfig[39m: {
+      "endpoint": "http://localstack:4566",
+      "region": "us-west-2"
+    }
+[2025-09-07 20:11:03.759 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:133:14]>: [36mSimple Publisher Service started successfully[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mport[39m: 3000
+[2025-09-07 20:11:03.759 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:134:14]>: [36mAvailable endpoints:[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+[2025-09-07 20:11:03.759 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:135:14]>: [36m  POST /webhook - Process HubSpot webhook events[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+[2025-09-07 20:11:03.759 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:136:14]>: [36m  GET  /health  - Health check[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+[2025-09-07 20:11:03.760 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:140:12]>: [36mHealth check server started[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mhealthPort[39m: 3001
+[2025-09-07 20:11:03.760 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:141:12]>: [36mHealth endpoints: /health/live, /health/ready, /health/startup, /health, /metrics[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+[2025-09-07 20:11:12.770 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:11:12.776 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:11:17.779 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:11:22.778 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:11:27.778 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:11:32.765 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:11:32.778 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:11:37.777 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:11:42.767 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:11:42.778 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:11:44.518 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "POST"
+    [35mpathname[39m: "/webhook"
+[2025-09-07 20:11:44.519 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:113:20]>: [36mProcessing webhook events[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35meventCount[39m: 1
+[2025-09-07 20:11:44.520 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:114:51]>: [36mResolving HubSpot queue URLs from configuration[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mhubspotConfig[39m: {
+      "webhookSingleQueueName": "hubspot-webhook-single-queue",
+      "webhookImportQueueName": "hubspot-webhook-import-queue",
+      "intentQueueName": "hubspot-intent-queue"
+    }
+[2025-09-07 20:11:44.521 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:114:51]>: [36mSQSService: Creating client[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+[2025-09-07 20:11:44.551 +0000] [31mERROR[39m <[node:internal/process/task_queues:95:5]>: [36mFailed to get queue URL from SQS[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    error: {
+      "name": "QueueDoesNotExist",
+      "$fault": "client",
+      "$metadata": {
+        "httpStatusCode": 400,
+        "requestId": "5364b4f8-a6ec-4e73-9a8a-9da3c1b75ba1",
+        "attempts": 1,
+        "totalRetryDelay": 0
+      },
+      "__type": "QueueDoesNotExist",
+      "Type": "Sender",
+      "Code": "AWS.SimpleQueueService.NonExistentQueue",
+      "Error": {
+        "Type": "Sender",
+        "Code": "AWS.SimpleQueueService.NonExistentQueue",
+        "message": "The specified queue does not exist."
+      }
+    }
+Error processing webhook batch: Error: Failed to resolve import queue URL: [object Object]
+    at HubspotWebhookProcessor.resolveQueueUrls (file:///app/node_modules/.pnpm/file+integrations+hubspot_@types+node@24.3.0/node_modules/@crm/hubspot/dist/index.js:3628:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async HubspotWebhookProcessor.processAndSendWebhookBatch (file:///app/node_modules/.pnpm/file+integrations+hubspot_@types+node@24.3.0/node_modules/@crm/hubspot/dist/index.js:3651:7)
+    at async Server.<anonymous> (file:///app/dist/simple-publisher.js:114:28)
+[2025-09-07 20:11:44.552 +0000] [31mERROR[39m <[node:internal/process/task_queues:95:5]>: [36mFailed to get queue URL from SQS[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    error: {
+      "name": "QueueDoesNotExist",
+      "$fault": "client",
+      "$metadata": {
+        "httpStatusCode": 400,
+        "requestId": "9fbf611a-91d1-4caa-83a9-b49b2375f2ea",
+        "attempts": 1,
+        "totalRetryDelay": 0
+      },
+      "__type": "QueueDoesNotExist",
+      "Type": "Sender",
+      "Code": "AWS.SimpleQueueService.NonExistentQueue",
+      "Error": {
+        "Type": "Sender",
+        "Code": "AWS.SimpleQueueService.NonExistentQueue",
+        "message": "The specified queue does not exist."
+      }
+    }
+[2025-09-07 20:11:44.553 +0000] [32mINFO[39m <[node:internal/process/task_queues:95:5]>: [36mResolved importResult queue URLs[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35msuccess[39m: false
+    error: {
+      "message": "The specified queue does not exist.",
+      "type": "UnknownError",
+      "name": "QueueDoesNotExist",
+      "cause": {
+        "name": "QueueDoesNotExist",
+        "$fault": "client",
+        "$metadata": {
+          "httpStatusCode": 400,
+          "requestId": "9fbf611a-91d1-4caa-83a9-b49b2375f2ea",
+          "attempts": 1,
+          "totalRetryDelay": 0
+        },
+        "__type": "QueueDoesNotExist",
+        "Type": "Sender",
+        "Code": "AWS.SimpleQueueService.NonExistentQueue",
+        "Error": {
+          "Type": "Sender",
+          "Code": "AWS.SimpleQueueService.NonExistentQueue",
+          "message": "The specified queue does not exist."
+        }
+      },
+      "stack":
+          QueueDoesNotExist: The specified queue does not exist.
+              at de_QueueDoesNotExistRes (/app/node_modules/.pnpm/@aws-sdk+client-sqs@3.864.0/node_modules/@aws-sdk/client-sqs/dist-cjs/index.js:1526:21)
+              at de_CommandError (/app/node_modules/.pnpm/@aws-sdk+client-sqs@3.864.0/node_modules/@aws-sdk/client-sqs/dist-cjs/index.js:1235:19)
+              at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+              at async /app/node_modules/.pnpm/@smithy+middleware-serde@4.0.9/node_modules/@smithy/middleware-serde/dist-cjs/index.js:36:20
+              at async /app/node_modules/.pnpm/@smithy+core@3.8.0/node_modules/@smithy/core/dist-cjs/index.js:193:18
+              at async /app/node_modules/.pnpm/@smithy+middleware-retry@4.1.19/node_modules/@smithy/middleware-retry/dist-cjs/index.js:320:38
+              at async /app/node_modules/.pnpm/@aws-sdk+middleware-logger@3.862.0/node_modules/@aws-sdk/middleware-logger/dist-cjs/index.js:33:22
+              at async _SQSService.getQueueUrl (file:///app/node_modules/.pnpm/file+packages+services/node_modules/@platform/services/dist/index.js:788:24)
+              at async Promise.all (index 0)
+              at async HubspotWebhookProcessor.resolveQueueUrls (file:///app/node_modules/.pnpm/file+integrations+hubspot_@types+node@24.3.0/node_modules/@crm/hubspot/dist/index.js:3619:58)
+    }
+[2025-09-07 20:11:44.553 +0000] [32mINFO[39m <[node:internal/process/task_queues:95:5]>: [36mResolved singleResult queue URLs[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35msuccess[39m: false
+    error: {
+      "message": "The specified queue does not exist.",
+      "type": "UnknownError",
+      "name": "QueueDoesNotExist",
+      "cause": {
+        "name": "QueueDoesNotExist",
+        "$fault": "client",
+        "$metadata": {
+          "httpStatusCode": 400,
+          "requestId": "5364b4f8-a6ec-4e73-9a8a-9da3c1b75ba1",
+          "attempts": 1,
+          "totalRetryDelay": 0
+        },
+        "__type": "QueueDoesNotExist",
+        "Type": "Sender",
+        "Code": "AWS.SimpleQueueService.NonExistentQueue",
+        "Error": {
+          "Type": "Sender",
+          "Code": "AWS.SimpleQueueService.NonExistentQueue",
+          "message": "The specified queue does not exist."
+        }
+      },
+      "stack":
+          QueueDoesNotExist: The specified queue does not exist.
+              at de_QueueDoesNotExistRes (/app/node_modules/.pnpm/@aws-sdk+client-sqs@3.864.0/node_modules/@aws-sdk/client-sqs/dist-cjs/index.js:1526:21)
+              at de_CommandError (/app/node_modules/.pnpm/@aws-sdk+client-sqs@3.864.0/node_modules/@aws-sdk/client-sqs/dist-cjs/index.js:1235:19)
+              at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+              at async /app/node_modules/.pnpm/@smithy+middleware-serde@4.0.9/node_modules/@smithy/middleware-serde/dist-cjs/index.js:36:20
+              at async /app/node_modules/.pnpm/@smithy+core@3.8.0/node_modules/@smithy/core/dist-cjs/index.js:193:18
+              at async /app/node_modules/.pnpm/@smithy+middleware-retry@4.1.19/node_modules/@smithy/middleware-retry/dist-cjs/index.js:320:38
+              at async /app/node_modules/.pnpm/@aws-sdk+middleware-logger@3.862.0/node_modules/@aws-sdk/middleware-logger/dist-cjs/index.js:33:22
+              at async _SQSService.getQueueUrl (file:///app/node_modules/.pnpm/file+packages+services/node_modules/@platform/services/dist/index.js:788:24)
+              at async Promise.all (index 1)
+              at async HubspotWebhookProcessor.resolveQueueUrls (file:///app/node_modules/.pnpm/file+integrations+hubspot_@types+node@24.3.0/node_modules/@crm/hubspot/dist/index.js:3619:58)
+    }
+[2025-09-07 20:11:44.554 +0000] [32mINFO[39m <[node:internal/process/task_queues:95:5]>: [36mResolved intentResult queue URLs[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35msuccess[39m: true
+    [35mdata[39m: "http://sqs.us-west-2.localhost.localstack.cloud:4566/000000000000/hubspot-intent-queue"
+    [35mstatusCode[39m: 200
+[2025-09-07 20:11:44.554 +0000] [31mERROR[39m <[node:internal/process/task_queues:95:5]>: [36m❌ Failed to resolve HubSpot queue URLs[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    error: {
+      "message": "Failed to resolve import queue URL: [object Object]",
+      "name": "Error",
+      "stack":
+          Error: Failed to resolve import queue URL: [object Object]
+              at HubspotWebhookProcessor.resolveQueueUrls (file:///app/node_modules/.pnpm/file+integrations+hubspot_@types+node@24.3.0/node_modules/@crm/hubspot/dist/index.js:3628:15)
+              at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+              at async HubspotWebhookProcessor.processAndSendWebhookBatch (file:///app/node_modules/.pnpm/file+integrations+hubspot_@types+node@24.3.0/node_modules/@crm/hubspot/dist/index.js:3651:7)
+              at async Server.<anonymous> (file:///app/dist/simple-publisher.js:114:28)
+    }
+[2025-09-07 20:11:44.555 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:115:20]>: [36mWebhook processing completed[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35msuccess[39m: false
+    [35mmessagesProcessed[39m: 0
+    [35merrors[39m: [
+      "Failed to resolve import queue URL: [object Object]"
+    ]
+[2025-09-07 20:11:47.777 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:11:52.766 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:11:52.777 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:11:57.778 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:12:02.767 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:12:02.777 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:12:07.777 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:12:12.766 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:12:12.778 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:12:17.780 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:12:22.767 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:12:22.778 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:12:27.778 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:12:32.767 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:12:32.778 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:12:37.778 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:12:42.767 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:12:42.778 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:12:47.777 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:12:52.766 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:12:52.777 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:12:57.778 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:13:02.766 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:13:02.778 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:13:07.778 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:13:12.767 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:13:12.780 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:13:17.779 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:13:22.767 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:13:22.778 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:13:27.779 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:13:32.766 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:13:32.778 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:13:37.779 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:13:42.767 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:13:42.778 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:13:47.778 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:13:52.769 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:13:52.778 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:13:57.779 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:14:02.768 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:14:02.779 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:14:07.779 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:14:12.750 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:14:12.762 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:14:17.763 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:14:22.750 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:14:22.762 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:14:27.762 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:14:32.751 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:14:32.762 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:14:37.762 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:14:42.741 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:14:42.751 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:14:47.752 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:14:52.741 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:14:52.752 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:14:57.753 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:15:02.741 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:15:02.752 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:15:07.753 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:15:12.741 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:15:12.750 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:15:17.752 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:15:22.739 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:15:22.751 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:15:27.752 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:15:32.738 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:15:32.750 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:15:37.751 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:15:42.741 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:15:42.751 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:15:47.753 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:15:52.739 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:15:52.750 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:15:57.751 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:16:02.739 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:16:02.752 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:16:07.751 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:16:12.741 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:16:12.751 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:16:17.751 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:16:22.739 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:16:22.750 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:16:27.751 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:16:32.739 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:16:32.751 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:16:37.751 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:16:42.739 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:16:42.750 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:16:47.751 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:16:52.739 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:16:52.751 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:16:57.751 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:17:02.739 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:17:02.752 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:17:07.753 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:17:12.739 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:17:12.751 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:17:17.750 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:17:22.738 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"
+[2025-09-07 20:17:22.750 +0000] [32mINFO[39m <[file:/app/dist/simple-publisher.js:81:16]>: [36mIncoming request[39m
+    [35mservice[39m: "my-service"
+    [35menv[39m: "development"
+    [35mversion[39m: "1.0.0"
+    [35mmethod[39m: "GET"
+    [35mpathname[39m: "/health"

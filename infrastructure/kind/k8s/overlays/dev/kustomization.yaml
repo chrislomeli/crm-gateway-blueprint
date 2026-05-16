@@ -1,0 +1,41 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# Include ALL base resources - infrastructure and apps
+resources:
+  - ../../base/shared-config
+  - ../../base/webhook-subscriber
+  - ../../base/intent-subscriber
+  - ../../base/simple-publisher
+  - ../../base/observability
+  - secrets.yaml  # The actual secret manifest
+
+# Replace ConfigMaps with local versions
+configMapGenerator:
+  - name: shared-config
+    behavior: replace
+    files:
+      - shared.yaml=configs/shared-config.yaml
+
+  - name: webhook-subscriber-config
+    behavior: replace
+    files:
+      - webhook-subscriber.yaml=configs/webhook-config.yaml
+
+  - name: intent-subscriber-config
+    behavior: replace
+    files:
+      - intent-subscriber.yaml=configs/intent-config.yaml
+
+  - name: simple-publisher-config
+    behavior: replace
+    files:
+      - simple-publisher.yaml=configs/hubspot-publisher-config.yaml
+
+  - name: opensearch-config
+    behavior: replace
+    files:
+      - opensearch-config.yaml=configs/opensearch-config.yaml
+
+# Set namespace for all resources
+namespace: default
